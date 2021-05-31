@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    /*font-family: 'Hind Siliguri', sans-serif;*/
+    font-family: 'Maitree', serif;
+    margin: 0;
+    max-width: 700px;
+}
+
+hr {
+    margin: 10px;
+}
+
+/*HEADER*/
+
+header {
+    background-color: rgba(33, 35, 56, 0.986);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    height: 4em;
+}
+
+.code-rev {
+    padding: 10px;
+}
+
+.below-header {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.below-header h3 {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.below-header p {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/*FORM*/
+
+form {
+    display: block;
+}
+
+label {
+  display: block;
+  flex-grow: 2;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 5px 0px 5px 0px;
+}
+
+input {
+    background-color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 5px;
+    height: 5em;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+select {
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 5em;
+    margin-top: 3px;
+    margin-bottom: 10px;
+
+}
+
+.contact-info {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.state:first-of {
+    display: none;
+}
+
+/*NEWSLETTER SECTION*/
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    border: solid red 2px;
+}
+
+.check-spacing {
+    margin: 10px 0;
+}
+
+div {
+    display: block;
+    background-color: blue;
+}
+
+div > label {
+  background-color:rgb(53, 160, 142);
+  display: inline-block;
+}
+
+
+
+/*SUBMIT*/
+
+button {
+    color: white;
+    background-color: rgb(53, 160, 142);
+
+}
+
+.button-section {
+    justify-content: center;
+    align-items: center;
+}
