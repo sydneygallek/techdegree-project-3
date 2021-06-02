@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    margin: 0;
 }
 
-main {
-    width: 90%;
+body {
+    /*font-family: 'Hind Siliguri', sans-serif;*/
+    font-family: 'Maitree', serif;
     margin: 0 auto;
 }
 
@@ -13,34 +13,25 @@ main {
     flex-direction: column;
 }
 
-body {
-    /*font-family: 'Hind Siliguri', sans-serif;*/
-    font-family: 'Maitree', serif;
-    margin: 0;
-}
-
 hr {
     margin: 10px;
 }
 
-/*HEADER*/
-
-header {
-    background-color: rgba(33, 35, 56, 0.986);
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    height: 4em;
-    width: 100%;
+main {
+    width: 98%;
+    margin: 0 auto;
 }
 
+/*HEADER*/
+
 .code-rev {
-    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    letter-spacing: 0px;
 }
 
 .below-header {
     display: flex;
-    margin: 5px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -54,6 +45,7 @@ header {
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .below-header p {
@@ -61,6 +53,17 @@ header {
     flex-wrap: wrap;
     text-align: center;
     font-weight: lighter;
+    margin-top: 0;
+}
+
+header {
+    background-color: rgba(33, 35, 56, 0.986);
+    color: white;
+    text-transform: uppercase;
+    height: 4em;
+    width: 100%;
+    justify-content: center;
+
 }
 
 .thick {
@@ -72,53 +75,44 @@ header {
     margin-top: 0px;
 }
 
+
 /*FORM*/
 
-form {
-    display: block;
-}
-
-label {
-  display: block;
-  flex-grow: 2;
-  font-size: 1rem;
-  font-weight: 100;
+.contact-info {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 fieldset {
     border: none;
 }
 
-legend {
-    font-weight: bold;
-    font-size: 1.3rem;
-    margin: 5px 0px 5px 0px;
+form {
+    display: block;
 }
 
-input {
-    background-color: rgb(228, 228, 228);
-    border: none;
-    border-radius: 5px;
-    height: 5em;
-    margin-top: 3px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    padding: 10px;
+input[class="zip"] {
+    width: 50%;
 }
 
-select {
-    background-color: rgb(228, 228, 228);
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    height: 5em;
-    margin-top: 3px;
-    margin-bottom: 10px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    
+input:focus,
+select:focus,
+option:focus,
+textarea:focus{
+    outline-color:#354657;
+    outline-width: thick;
+    background-color: #354657;
+    color:white;
+}
 
+input:hover,
+select:hover,
+textarea:hover {
+    cursor: pointer;
+    transform: translate(3px, 3px);
+    box-shadow: -6px -5px 8px 0px rgba(199,203,207,1);
 }
 
 input::placeholder {
@@ -130,39 +124,55 @@ input::placeholder {
     font-family: 'Maitree', serif;
 }
 
-option {
-    font-family: 'Maitree', serif;
-}
-
-
-input:hover,
-select:hover,
-textarea:hover {
-    cursor: pointer;
-    transform: translate(3px, 3px);
-    box-shadow: -6px -5px 8px 0px rgba(199,203,207,1);
-}
-
-.contact-info {
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select { 
+    background-color: rgb(228, 228, 228);
     border: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    border-radius: 5px;
+    height: 5em;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px;
 }
 
-.state::first{
+label {
+    display: block;
+    flex-grow: 2;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+
+legend {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 5px 0px 5px 0px;
+}
+
+select {
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 5em;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    appearance: none;
+}
+
+.state::after{
     color: gray;
 }
 
-input[class="zip"] {
-    width: 50%;
-}
+
 
 /*NEWSLETTER SECTION*/
 
 .select-newsletter {
     font-size: 1rem;
-    margin: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 7px;
     font-weight:lighter;
     padding: 0;
 }
@@ -179,8 +189,12 @@ input[class="zip"] {
 }
 
 .textarea {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     margin-bottom: 100px;
+
 }
 
 #textarea-topics {
@@ -197,63 +211,51 @@ input[class="zip"] {
 div {
     display: flex;
     margin-bottom: 0px;
-    
     height: 40px;
     
 }
 
-div > input {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px;
-}
-
 div > label {
-  display: flex;
-  flex-grow: 0;
-  flex-wrap: wrap;
-  text-align: center;
-    vertical-align: middle;
-    line-height: 65px;
-    margin-left: 5px;
-
+display: flex;
+align-items: center;
+margin: 8px;
 }
-
-
 
 /*SUBMIT*/
 
-button {
-    display: flex;
+.sign-up {
+    margin: auto;
     color: white;
     background-color: rgb(63, 167, 149);
-    border-radius: 5px;
     font-size: 1em;
-    padding: 10px 100px 10px 100px;
     border: none;
+    border-radius: 5px;
     font-family: 'Maitree', sans-serif;
     font-weight: bold;
+    padding: 16px;
+    width: 100%;
+    justify-content: center;
 }
 
-.button-section {
-    display: flex;
-    justify-content: center;
-
+.button-contain {
+    margin: 0px 20px 0px 20px;
 }
 
 /*FOOTER*/
 
 footer {
-    display: flex;
+    display: block;
+    text-align: center;
     justify-content: center;
-    margin: 20px 70px 70px 70px;
+    margin: 20px;
     font-style: italic;
     color: rgb(163, 163, 163);
     font-size: .8em;
 }
 
-
-
+footer > p {
+margin-bottom: 200px;
+}
 
 /***MEDIA QUERY***/
 
@@ -271,25 +273,43 @@ footer {
     }
 
     main {
-        width: 50%;
+        width: 60%;
     }
 
     .container {
         width: 100%;
     }
 
-    input[class="zip"] {
-        width: 24%;
-    }
-
-    button {
-        margin: 0px 10px 0px 10px;
-        flex-grow: .95;
-    }
-
-    .sign-up {
-        display: flex;
-        justify-content: center;
-    }
-
+.contact-info {
+    display: inline-flex;
+    flex-wrap: wrap;  
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-basis: 100%;
+    float: left;
 }
+  .contact-info label {
+      flex-basis: 30%;
+      display: flex;
+      flex-grow: 0;
+      padding-top: 17px;
+
+
+  }
+
+  .contact-info input,
+  .contact-info select {
+      flex-basis: 70%;
+  }
+
+  #zip {
+      display: flex;
+      justify-content: flex-start;
+      flex-grow: 0;
+  }
+ 
+  input[class="zip"] {
+
+      flex-basis: 25%;
+  }
+
