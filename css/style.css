@@ -139,7 +139,6 @@ select {
 }
 
 label {
-    display: block;
     flex-grow: 2;
     font-size: 1rem;
     font-weight: 100;
@@ -216,9 +215,11 @@ div {
 }
 
 div > label {
-display: flex;
-align-items: center;
-margin: 8px;
+margin-left: 5px;
+}
+
+#newsletter-format {
+    padding-top: 2px;
 }
 
 /*SUBMIT*/
